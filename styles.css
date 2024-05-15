@@ -20,7 +20,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0),
+      rgba(1, 107, 163, 0.4),
       rgba(255, 255, 255, 0)
     ),
     url("assets/bg.jpg");
@@ -78,7 +78,7 @@ nav {
   border-radius: 2rem;
   transition: 0.3s;
 }
-.search .btn{
+button.btn{
   padding: 0.3rem 0.3rem;
   outline: none;
   border:none;
@@ -236,6 +236,26 @@ button.btn:hover {
 .destination__card img {
   width: 100%;
 }
+.card_container {
+  width: 40%;
+  position: absolute;
+  top: 0;
+  left: 60%;
+  z-index:1;
+  
+  
+}
+
+.card {
+  
+  background-color: var(--white);
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.card img {
+  width:100%;
+  border-radius: 5px 5px 0 0;
+}
 
 .card__content {
   padding: 1rem;
@@ -257,13 +277,14 @@ button.btn:hover {
 
 .card__content .btn {
   padding: 0.5rem 1rem;
-  outline: none;
+  /* outline: none;
   border: none;
   font-weight: 500;
   color: var(--white);
-  background-color: var(--primary-color);
-  cursor: pointer;
+  background-color: var(--secondary-color);
+  cursor: pointer; */
 }
+
 
 @media (width < 1200px) {
   .search {
