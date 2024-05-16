@@ -1,3 +1,5 @@
 {
-    "livePreview.defaultPreviewPath": "/travel_recommendation.html"
+    "livePreview.defaultPreviewPath": "/travel_recommendation.html",
+    "livePreview.debugOnExternalPreview": false,
+    "livePreview.openPreviewTarget": "Embedded Preview"
 }

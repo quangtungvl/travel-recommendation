@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
 
 :root {
-  --primary-color: #00605f;
+  --primary-color: #0170a3;
   --secondary-color: #208dbc;
   --third-color: #48a9d3;
   --text-dark: #0f172a;
@@ -37,16 +37,38 @@ body {
   display: flex;
   flex-direction: column;
 }
+.container-3{
+  max-width: var(--max-width);
+  min-height: 100vh;
+  padding: 1rem;
+}
+
 
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1rem;
+  background-color: var(--primary-color);
 }
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 
+}
 .nav__logo img {
   max-width: 70px;
+  margin: 0.5rem;
+}
+.nav__logo span {
+  display: inline-block;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-right: 5rem;
+  
+  color: var(--white);
 }
 
 .nav__links {
@@ -139,7 +161,7 @@ button.btn:hover {
   position: relative;
   padding: 0 0 5rem 5rem;
   flex: 1;
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr 2fr;
   gap: 2rem;
   align-items: center;
@@ -167,7 +189,6 @@ button.btn:hover {
 .socials {
   position: absolute;
   top: 25rem;
-  left: 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -176,7 +197,7 @@ button.btn:hover {
 .socials::after {
   position: absolute;
   content: "";
-  top: -22rem;
+  top: -17rem;
   left: 15px;
   height: 15rem;
   width: 2px;
@@ -191,23 +212,49 @@ button.btn:hover {
   font-size: 2.1rem;
 }
 
-.content h1 {
-  margin-bottom: 1rem;
-  font-size: 4.5rem;
-  font-weight: 800;
+
+.content{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-left: 100px;
+  padding-top: 100px;
   color: var(--white);
 }
-
+.flex-left{
+  width: 50%;
+}
+.flex-right{
+  width: 50%;
+}
 /* .content h1 span {
   -webkit-text-stroke: 2px var(--white);
   -webkit-text-fill-color: transparent; 
 } */
+.mt-20{
+  margin-top: 20px;
+  
 
+}
+.single{
+  flex-direction: column;
+}
+.bg-black{
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 4.5rem;
+  font-weight: 800;
+  
+  
+}
 .content p {
-  max-width: 350px;
-  margin-bottom: 2rem;
   line-height: 1.5rem;
-  color: var(--white);
+  
+  
 }
 
 .content .btn {
@@ -217,8 +264,64 @@ button.btn:hover {
   font-size: 1rem;
   font-weight: 600;
   color: var(--white);
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
   cursor: pointer;
+}
+.content-2 h1 {
+  margin-bottom: 1rem;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: var(--white);
+  padding-top: 5rem;
+}
+.content-2 p {
+  text-align: justify;
+  padding: 1rem 1rem 1rem 1rem;
+  margin-bottom: 2rem;
+  margin-right: 0;
+  line-height: 1.5rem;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.4);
+  
+}
+.team{
+  margin-bottom: 1rem;
+  
+  color: var(--white);
+  padding-top: 5rem;
+  display: flex;
+}
+.team h1{
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-right: 150px;
+  margin-left: 50px;
+}
+.team-member{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-right: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 2rem;
+
+}
+.team-member i{
+  font-size: 1.5rem;
+}
+.team-member div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.team-member span{
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  border-color: var(--white);
+  font-weight: 600;
 }
 
 .destination__grid {
@@ -237,13 +340,9 @@ button.btn:hover {
   width: 100%;
 }
 .card_container {
-  width: 40%;
-  position: absolute;
-  top: 0;
-  left: 60%;
+  
+  color:black;
   z-index:1;
-  
-  
 }
 
 .card {
@@ -283,6 +382,54 @@ button.btn:hover {
   color: var(--white);
   background-color: var(--secondary-color);
   cursor: pointer; */
+}
+.form {
+  border-radius: 5px;
+  background-color:rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+.form input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  background-color:rgba(0, 0, 0, 0.3);
+}
+
+.form label{
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+.form input[type=submit] {
+  padding: 12px 12px 12px 0;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 800;
+  padding-top: 12px;
+ margin-top: 12px;
+}
+
+
+
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 
